@@ -10,7 +10,7 @@ public class Main {
 		
 		
 		//tamanho robo = 23x23
-		//turn(2880, 1); 
+		turn(2880, 1); 
 		
     	
 		
