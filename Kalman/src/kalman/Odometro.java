@@ -1,4 +1,4 @@
-package Kalman;
+package kalman;
 import lejos.nxt.*;
 
 public class Odometro {
@@ -12,13 +12,11 @@ public class Odometro {
 	}
 	
 	public void medirOdometro(){
-		int anterior = 7, color, distance = 0;	
+		int anterior = 7, color, distance = 0;		
 		
-		Motor.A.setSpeed(100);
 		Motor.B.setSpeed(100);
 	    Motor.C.setSpeed(100);
-	    
-	    Motor.A.rotate(36000, true);
+	        
 	    Motor.B.rotate(-36000, true);
 	    Motor.C.rotate(-36000, true);
 	    
@@ -36,7 +34,6 @@ public class Odometro {
     	 		SensorPort.S1.reset();
     		} while (distance < this.meta && Motor.B.isMoving());
 	    
-	    Motor.A.stop();
 	    Motor.B.stop();
 	    Motor.C.stop();
 	}
